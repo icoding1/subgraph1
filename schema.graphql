@@ -1,0 +1,15 @@
+# schema.graphql
+
+# Define the data structure for the hash logs
+type HashLog @entity {
+  id: ID!
+  hash: String!
+  logData: String!
+  # Add more fields as needed
+}
+
+# Define the query type for retrieving hash logs
+type Query {
+  # Query to retrieve hash logs by hash value
+  hashLogs(hash: String!): [HashLog!]!
+}
